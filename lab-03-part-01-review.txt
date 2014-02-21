@@ -15,7 +15,7 @@ This lab will review downloading and uncompressing files, and it will get us set
 
 Write the command that you used to do this below:
 ----------
-
+cd ~
 
 
 ==========
@@ -23,15 +23,18 @@ Write the command that you used to do this below:
 
 Write the command that you used to do this - as well as its output - below :
 ----------
-
-
+pwd
+/Users/student
 
 ==========
 3. Are there any directories or files in your directory that have the word mtec1002 in it?
 
 Write the command(s) that you used to determine this - as well as its output - below:
 ----------
-
+ent-v321-011:~ student$ ls
+Desktop		Downloads	Movies		My Song.band	Public		Things		vms
+Documents	Library		Music		Pictures	Sites		VirtualBox VMs	work
+ent-v321-011:~ student$ 
 
 
 ==========
@@ -65,6 +68,11 @@ This command should have a *flag* to specify the output file.  MAKE SURE TO NAME
 
 Write the command(s) that you used to download this file - as well as its output - below:
 ----------
+ent-v321-011:~ student$ curl -o mtec1002-lab-03.tar.gz http://foureyes.github.io/mtec1002-spring2014/labs/03/mtec1002-lab-03.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  898k  100  898k    0     0  4482k      0 --:--:-- --:--:-- --:--:-- 4490k
+ent-v321-011:~ student$ 
 
 
 
@@ -73,7 +81,7 @@ Write the command(s) that you used to download this file - as well as its output
 
 Write the command(s) that you used to do this - as well as its output - below:
 ----------
-
+unzip mtec1002-lab-03.tar.gz
 
 
 ==========
@@ -88,7 +96,14 @@ Otherwise...
 
 Write the command(s) that you used to do this - as well as its output - below:
 ----------
-
+ent-v321-011:~ student$ ls
+Desktop			My Song.band		mtec1002-lab-03
+Documents		Pictures		mtec1002-lab-03.tar.gz
+Downloads		Public			vms
+Library			Sites			work
+Movies			Things
+Music			VirtualBox VMs
+ent-v321-011:~ student$ 
 
 
 ==========
@@ -96,6 +111,10 @@ Write the command(s) that you used to do this - as well as its output - below:
 
 Write the command(s) that you used to determine this - as well as its output - below:
 ----------
+ent-v321-011:~ student$ cd mtec1002-lab-03
+ent-v321-011:mtec1002-lab-03 student$ ls
+books	logs	web
+ent-v321-011:mtec1002-lab-03 student$ 
 
 
 
@@ -104,6 +123,14 @@ Write the command(s) that you used to determine this - as well as its output - b
 
 Write the command(s) (including going home) that you used to do this below:
 ----------
+ent-v321-011:~ student$ mtec1002-lab-03/books
+-bash: mtec1002-lab-03/books: is a directory
+ent-v321-011:~ student$ cd mtec1002-lab-03/books
+ent-v321-011:books student$ ls
+other		science-fiction
+ent-v321-011:books student$ cd science-fiction
+ent-v321-011:science-fiction student$ ls
+pg84.txt	pg86.txt
 
 
 
@@ -112,7 +139,8 @@ Write the command(s) (including going home) that you used to do this below:
 
 Write the command(s) that you used to do this - as well as its output - below:
 ----------
-
+ent-v321-011:science-fiction student$ ls
+pg84.txt	pg86.txt
 
 
 ==========
@@ -120,6 +148,9 @@ Write the command(s) that you used to do this - as well as its output - below:
 
 Write the command(s) that you used to do this below:
 ----------
+ent-v321-011:~ student$ cd /Users/student/mtec1002-lab-03/books/science-fiction/
+ent-v321-011:science-fiction student$ 
+
 
 ==========
 OPTIONAL
@@ -141,3 +172,4 @@ OPTIONAL
 
 Write the command(s) that you used to do this below:
 ----------
+
