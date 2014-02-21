@@ -12,7 +12,7 @@ Follow the instructions line-by-line.
 [NO OUTPUT]
 ----------
 ==========
-2. Find out if mtec1002-lab-02 already exists (from the previous lab).  If it doesn't, go back to the previous lab and find the steps regarding downloading the lab materials.
+2. Find out if mtec1002-lab-03 already exists (from the previous lab).  If it doesn't, go back to the previous lab and find the steps regarding downloading the lab materials.
 
 (See steps 1-8 in http://foureyes.github.io/mtec1002-spring2014/labs/03/lab-03-part-02-working-with-files.txt)
 [NO OUTPUT]
@@ -36,6 +36,9 @@ $ touch foo.txt
 $ ls
 Copy and paste the output below.
 ----------
+ent-v321-011:my_files student$ touch foo.txt
+ent-v321-011:my_files student$ ls
+foo.txt
 
 
 
@@ -44,6 +47,8 @@ Copy and paste the output below.
 
 $ touch bar.txt
 ----------
+ent-v321-011:my_files student$ ls
+bar.txt	foo.txt
 
 
 
@@ -52,6 +57,11 @@ $ touch bar.txt
 
 Copy and paste the output below.
 ----------
+drwxr-xr-x  4 student  staff  136 Feb 19 19:27 .
+-rw-r--r--  1 student  staff    0 Feb 19 19:27 bar.txt
+-rw-r--r--  1 student  staff    0 Feb 19 19:27 foo.txt
+drwxr-xr-x  7 student  staff  238 Feb 19 19:27 ..
+ent-v321-011:my_files student$ 
 
 
 
@@ -61,6 +71,9 @@ Copy and paste the output below.
 
 Write the command that you used to copy the file.  Additionally, copy and paste the output of your file listing below.
 ----------
+ent-v321-011:my_files student$ cp bar.txt baz.txt
+ent-v321-011:my_files student$ ls
+bar.txt	baz.txt	foo.txt
 
 
 
@@ -69,13 +82,20 @@ Write the command that you used to copy the file.  Additionally, copy and paste 
 
 Write the command that you used to remove the file.  Copy and paste the output of your file listing below.
 ----------
+ent-v321-011:my_files student$ rm bar.txt
+ent-v321-011:my_files student$ ls
+baz.txt	foo.txt
+
+
+
 ==========
 11. Move the file called foo.txt to qux.txt and then list the files again.
 
 
 Write the command that you used to move the file.  Copy and paste the output of your file listing below.
 ----------
-
+ent-v321-011:my_files student$ ls
+baz.txt	qux.txt
 
 
 ==========
@@ -90,7 +110,8 @@ Write the command that you used to move the file.  Copy and paste the output of 
 
 Write out the command that you used and what happened.
 ----------
-
+ent-v321-011:mtec1002-lab-03 student$ rmdir my_files/
+rmdir: my_files/: Directory not empty
 
 
 ==========
@@ -98,7 +119,8 @@ Write out the command that you used and what happened.
 
 Write out the command that you used and what happened.
 ----------
-
+ent-v321-011:mtec1002-lab-03 student$ rm my_files/
+rm: my_files/: is a directory
 
 
 ==========
@@ -108,7 +130,10 @@ Force the removal of the directory and files using the -rf flag
 
 $ rm -rf my_files
 ----------
-
+ent-v321-011:mtec1002-lab-03 student$ rm -rf my_files/
+ent-v321-011:mtec1002-lab-03 student$ ls
+books	logs	web
+ent-v321-011:mtec1002-lab-03 student$ 
 
 
 ==========
@@ -144,6 +169,12 @@ Use tail on the file to show the contents of the end of the file.
 
 Write the command that you used below.  Write the last line of the output below (it should be the title).
 ----------
+ent-v321-011:books student$ cd other
+ent-v321-011:other student$ head pg1232.txt 
+
+Title: The Prince
+
+ent-v321-011:other student$ 
 
 
 
@@ -156,6 +187,10 @@ Use less and more on the file to show the contents of the file.  Try pressing sp
 
 Write the command that you used below.  Describe what spacebar and q does after using either less or more.
 ----------
+ent-v321-011:other student$ less pg1232.txt 
+ent-v321-011:other student$ more pg1232.txt 
+
+When I use the ‘more’ I can’t cancel using q
 
 
 
@@ -164,15 +199,30 @@ Write the command that you used below.  Describe what spacebar and q does after 
 
 (Some characteristics that may help your description might be the length of the file, whether or not you'd like to read the whole thing... or just the beginning or end, etc.)
 ----------
-
+To show contents of a file with pagination, to see the beginning and the end of the given .txt file.
 
 
 ==========
 21.  How many words are in pg1232.txt?  What command did you use to determine the word count?
 ----------
+ent-v321-011:other student$ wc pg1232.txt 
+    5063   52639  305864 pg1232.txt
+
 
 
 
 ==========
 22.  How many lines are in pg1232.txt?  What command did you use to determine the line count?
+----------
+
+ent-v321-011:other student$ wc -l pg1232.txt 
+    5063 pg1232.txt
+
+
+==========
+OPTIONAL
+
+23.  Make sure you're in the books/other folder.  Copy all of the txt files from that folder to your home directory using wildcard matching.
+
+Write the command that you used below.
 ----------
